@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main() {
@@ -27,7 +26,6 @@ int main() {
     for(i = 0; i < n - 1; i++) {
         for(j = i + 1; j < n; j++) {
             if(arrival[i] > arrival[j]) {
-
                 int temp;
 
                 temp = arrival[i];
@@ -46,7 +44,6 @@ int main() {
     }
 
     for(i = 0; i < n; i++) {
-
         if(current_time < arrival[i]) {
             current_time = arrival[i];
         }
@@ -64,10 +61,10 @@ int main() {
     avg_tat /= n;
     avg_wt /= n;
 
-    printf("\nProcess Arrival Time Burst Time Completion Time Turnaround Time Waiting Time\n");
+    printf("\nProcess\tArrival\tBurst\tCT\tTAT\tWT\n");
 
     for(i = 0; i < n; i++) {
-        printf("%d\t%d\t%d\t%d\t\t%d\t\t%d\n",
+        printf("%d\t%d\t%d\t%d\t%d\t%d\n",
                process[i],
                arrival[i],
                burst[i],
@@ -78,6 +75,8 @@ int main() {
 
     printf("\nAverage Turnaround Time: %.2f\n", avg_tat);
     printf("Average Waiting Time: %.2f\n", avg_wt);
+
+    printf("1BF24CS318");
 
     return 0;
 }
